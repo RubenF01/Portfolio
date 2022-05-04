@@ -6,7 +6,7 @@ const Footer = ({ classes }) => {
       <nav className="space-x-5">
         <a href="#">About</a>
         <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="/contact">Contact</a>
       </nav>
       <a href="/" className="font-hurricane text-2xl">
         Rubén Frías

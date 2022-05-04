@@ -1,8 +1,12 @@
 import { useMedia } from "react-use";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import MenuContext from "../context/menuContext";
+import { useContext } from "react";
 
 const NavBar = () => {
+  const value = useContext(MenuContext);
+  let { toggleMenu } = value;
   const isWide = useMedia("(min-width: 768px)", true);
   return (
     <div className="flex justify-between max-w-xs mx-auto pt-8 text-slate-900">
@@ -17,7 +21,7 @@ const NavBar = () => {
         </nav>
       ) : (
         <div className="w-7">
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon onClick={() => toggleMenu()} icon={faBars} />
         </div>
       )}
     </div>

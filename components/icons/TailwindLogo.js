@@ -1,4 +1,4 @@
-const SvgComponent = (props) => (
+const TailwindLogo = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={120} height={60} {...props}>
     <defs>
       <linearGradient
@@ -27,4 +27,4 @@ const SvgComponent = (props) => (
   </svg>
 );
 
-export default SvgComponent;
+export default TailwindLogo;

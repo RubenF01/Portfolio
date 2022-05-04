@@ -2,6 +2,7 @@ import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
+import HamburgerMenu from "../components/HamburgerMenu";
 
 const Contact = () => {
   return (
@@ -27,6 +28,7 @@ const Contact = () => {
         <div className="absolute mt-40">
           <Footer classes="absolute bottom-0 w-screen" />
         </div>
+        <HamburgerMenu />
       </main>
     </div>
   );

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
-import SkillsSection from "../components/SkillsSection";
 import ProjectsSection from "../components/ProjectsSection";
+import HamburgerMenu from "../components/HamburgerMenu";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -13,10 +13,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="font-poppins">
+      <main className="font-poppins relative">
         <Hero />
-        <SkillsSection />
         <ProjectsSection />
+        <HamburgerMenu />
         <Footer />
       </main>
     </div>
