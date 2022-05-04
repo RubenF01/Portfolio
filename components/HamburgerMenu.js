@@ -1,27 +1,68 @@
 import MenuContext from "../context/menuContext";
 import { useContext } from "react";
 import IconXMark from "./icons/IconXMark";
+import { motion, AnimatePresence } from "framer-motion";
 
 const HamburgerMenu = () => {
   const value = useContext(MenuContext);
   let { menuOpen, toggleMenu } = value;
+  let startPointWidth = menuOpen && window.innerWidth;
 
   return (
-    <div className={menuOpen ? "fixed bg-slate-900 inset-0" : "hidden"}>
-      <div className="max-w-xs mx-auto flex justify-between pt-8 pb-16">
-        <a className="font-hurricane text-4xl font-bold text-white" href="/">
-          RF
-        </a>
-        <div className="text-2xl w-5 fill-white">
-          <IconXMark onClick={() => toggleMenu()} />
-        </div>
-      </div>
-      <nav className="flex flex-col max-w-xs mx-auto text-4xl space-y-8 text-white">
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="/contact">Contact</a>
-      </nav>
-    </div>
+    <AnimatePresence>
+      {menuOpen ? (
+        <motion.div
+          initial={{ x: startPointWidth }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.6 }}
+          exit={{ x: startPointWidth }}
+          className="fixed bg-slate-900 inset-0"
+        >
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2, delay: 0.6 }}
+            className="max-w-xs mx-auto flex justify-between pt-8 pb-16"
+          >
+            <a
+              className="font-hurricane text-4xl font-bold text-white"
+              href="/"
+            >
+              RF
+            </a>
+            <div className="text-2xl w-5 fill-white">
+              <IconXMark onClick={() => toggleMenu()} />
+            </div>
+          </motion.div>
+          <nav className="flex flex-col max-w-xs mx-auto text-4xl space-y-8 text-white">
+            <motion.a
+              initial={{ x: startPointWidth }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.6, duration: 0.2 }}
+              href="/about"
+            >
+              About
+            </motion.a>
+            <motion.a
+              initial={{ x: startPointWidth }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.7, duration: 0.2 }}
+              href="#"
+            >
+              Projects
+            </motion.a>
+            <motion.a
+              initial={{ x: startPointWidth }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.8, duration: 0.2 }}
+              href="/contact"
+            >
+              Contact
+            </motion.a>
+          </nav>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
   );
 };
 
