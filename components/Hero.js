@@ -1,8 +1,23 @@
 import NavBar from "./NavBar";
-import Divider from "./icons/Divider";
+import Dividersm from "../public/Dividersm.svg";
+import Dividermd from "../public/Dividermd.svg";
+import Dividerlg from "../public/Dividerlg.svg";
 import { motion } from "framer-motion";
+import { useMedia } from "react-use";
 
 const Hero = () => {
+  const isSmall = useMedia("(max-width: 767px)", false);
+  const isMid = useMedia("(min-width: 768px)", false);
+  const isWide = useMedia("(max-width: 1023px)", false);
+  const isLarge = useMedia("(min-width: 1024px)", false);
+
+  const dividerSelector = () => {
+    if (isSmall) return <Dividersm />;
+    if (isMid && isWide) return <Dividermd />;
+    if (isLarge) return <Dividerlg />;
+  };
+
+  const hola = () => console.log("hola");
   return (
     <div>
       <NavBar />
@@ -11,7 +26,7 @@ const Hero = () => {
           <h1 className="text-xl pb-5">Hey there, I'm Ruben Frias</h1>
           <h1 className="animate-wiggle text-xl">👋🏾</h1>
         </div>
-        <h2 className="text-center font-bold text-3xl max-w-xs mx-auto pb-10">
+        <h2 className="text-center font-bold text-3xl md:text-4xl md:px-10 max-w-xs md:max-w-3xl mx-auto pb-10 md:leading-relaxed">
           I'm a Front-End Engineer with a passion for building experiences
         </h2>
         <motion.button
@@ -22,7 +37,7 @@ const Hero = () => {
         >
           <a href="/contact">Connect with me</a>
         </motion.button>
-        <Divider />
+        {dividerSelector()}
       </div>
     </div>
   );

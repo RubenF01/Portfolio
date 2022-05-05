@@ -8,11 +8,11 @@ import { motion } from "framer-motion";
 const NavBar = () => {
   const value = useContext(MenuContext);
   let { toggleMenu, menuOpen } = value;
-  const isWide = useMedia("(min-width: 768px)", true);
+  const isWide = useMedia("(min-width: 768px)", false);
   let startPointHeight = menuOpen && window.innerHeight;
 
   return (
-    <div className="flex justify-between max-w-xs mx-auto pt-8 text-slate-900">
+    <div className="flex justify-between max-w-xs md:max-w-2xl mx-auto pt-8 text-slate-900">
       {menuOpen ? (
         <motion.a
           initial={{ opacity: 1 }}
@@ -29,7 +29,7 @@ const NavBar = () => {
         </a>
       )}
       {isWide ? (
-        <nav>
+        <nav className="space-x-7">
           <a href="/about">About</a>
           <a href="#">Projects</a>
           <a href="/contact">Contact</a>

@@ -19,7 +19,7 @@ const About = () => {
 
   useEffect(() => {
     const options = {
-      strings: ["About who?", "About me?", "About Ruben"],
+      strings: ["About who?", "About me", "About Ruben"],
       typeSpeed: 60,
       backSpeed: 60,
     };
@@ -52,7 +52,7 @@ const About = () => {
 
       <main className="h-screen font-poppins">
         <NavBar />
-        <div className="max-w-xs mx-auto pt-8">
+        <div className="max-w-xs md:max-w-2xl mx-auto pt-8">
           <span className="text-2xl font-bold" ref={el} />
         </div>
 
@@ -60,7 +60,7 @@ const About = () => {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 4 }}
-          className="py-7 max-w-xs mx-auto leading-loose space-y-3"
+          className="py-7 max-w-xs md:max-w-2xl mx-auto leading-loose md:text-2xl space-y-3"
         >
           <p>
             Hi, my name (as you may already know) is Ruben Frias. I'm a
@@ -100,14 +100,13 @@ const About = () => {
           </Slider>
         </motion.div>
 
-        <div className="mt-20">
-          <Footer />
-        </div>
-
         <HamburgerMenu />
 
         <style>{css}</style>
       </main>
+      <div className="">
+        <Footer />
+      </div>
     </div>
   );
 };
