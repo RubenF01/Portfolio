@@ -25,8 +25,8 @@ const Contact = () => {
           </div>
           <Form />
         </div>
-        <div className="absolute mt-40">
-          <Footer classes="absolute bottom-0 w-screen" />
+        <div className="mt-16">
+          <Footer />
         </div>
         <HamburgerMenu />
       </main>
