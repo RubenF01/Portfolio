@@ -47,11 +47,16 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <div className="pb-10 max-w-xs md:max-w-2xl mx-auto">
+    <div
+      className="pb-10 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
+      id="projects"
+    >
       <div className="pt-10">
-        <h1 className="font-bold text-xl pb-5 text-slate-900">Projects</h1>
+        <h1 className="font-bold text-xl lg:text-3xl pb-5 text-slate-900">
+          Projects
+        </h1>
       </div>
-      <div className="flex flex-col space-y-4 max-w-xs md:max-w-2xl mx-auto">
+      <div className="flex flex-col space-y-4 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}

@@ -4,12 +4,13 @@ import Dividermd from "../public/Dividermd.svg";
 import Dividerlg from "../public/Dividerlg.svg";
 import { motion } from "framer-motion";
 import { useMedia } from "react-use";
+import Link from "next/dist/client/link";
 
 const Hero = () => {
   const isSmall = useMedia("(max-width: 767px)", false);
   const isMid = useMedia("(min-width: 768px)", false);
-  const isWide = useMedia("(max-width: 1023px)", false);
-  const isLarge = useMedia("(min-width: 1024px)", false);
+  const isWide = useMedia("(max-width: 1024px)", false);
+  const isLarge = useMedia("(min-width: 1025px)", false);
 
   const dividerSelector = () => {
     if (isSmall) return <Dividersm />;
@@ -26,7 +27,7 @@ const Hero = () => {
           <h1 className="text-xl pb-5">Hey there, I'm Ruben Frias</h1>
           <h1 className="animate-wiggle text-xl">👋🏾</h1>
         </div>
-        <h2 className="text-center font-bold text-3xl md:text-4xl md:px-10 max-w-xs md:max-w-3xl mx-auto pb-10 md:leading-relaxed">
+        <h2 className="text-center font-bold text-3xl md:text-4xl lg:text-6xl md:px-10 max-w-xs md:max-w-3xl lg:max-w-4xl mx-auto pb-10 md:leading-relaxed">
           I'm a Front-End Engineer with a passion for building experiences
         </h2>
         <motion.button
@@ -35,7 +36,9 @@ const Hero = () => {
           type="button"
           className="bg-slate-800 rounded-3xl py-2 px-4 text-lg mb-32 text-white shadow-2xl"
         >
-          <a href="/contact">Connect with me</a>
+          <Link href="/contact">
+            <a>Connect with me</a>
+          </Link>
         </motion.button>
         {dividerSelector()}
       </div>

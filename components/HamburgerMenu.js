@@ -2,6 +2,7 @@ import MenuContext from "../context/menuContext";
 import { useContext } from "react";
 import IconXMark from "./icons/IconXMark";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const HamburgerMenu = () => {
   const value = useContext(MenuContext);
@@ -24,12 +25,9 @@ const HamburgerMenu = () => {
             transition={{ duration: 0.2, delay: 0.6 }}
             className="max-w-xs mx-auto flex justify-between pt-8 pb-16"
           >
-            <a
-              className="font-hurricane text-4xl font-bold text-white"
-              href="/"
-            >
-              RF
-            </a>
+            <Link href="/">
+              <a className="font-hurricane text-4xl font-bold text-white">RF</a>
+            </Link>
             <div className="text-2xl w-5 fill-white">
               <IconXMark onClick={() => toggleMenu()} />
             </div>

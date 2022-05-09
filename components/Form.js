@@ -11,19 +11,22 @@ const Form = () => {
       className="flex flex-col max-w-xs mx-auto py-8 space-y-3"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <label>Name</label>
+      <label htmlFor="name">Name</label>
       <input
+        name="name"
         className="border-b-[1px] border-b-slate-900"
         {...register("name", { required: true })}
       />
-      <label>Email</label>
+      <label htmlFor="email">Email</label>
       <input
+        name="email"
         className="border-b-[1px] border-b-slate-900"
         type="email"
         {...register("email", { required: true })}
       />
-      <label>Message</label>
+      <label htmlFor="message">Message</label>
       <textarea
+        name="message"
         className="h-24 border-[1px] border-slate-900 rounded"
         {...register("message", { required: true })}
       />

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/dist/client/link";
 
 const Project = ({ name, image, technologies, link }) => {
   const [isShown, setIsShown] = useState(false);
@@ -26,9 +27,9 @@ const Project = ({ name, image, technologies, link }) => {
         <div className="space-x-3">
           <button className="border-2 rounded px-3 py-1">LEARN MORE</button>
           <button className="border-2 rounded px-3 py-1">
-            <a href={link} target="_blank">
-              VISIT SITE
-            </a>
+            <Link href={link}>
+              <a target="_blank">VISIT SITE</a>
+            </Link>
           </button>
         </div>
       </div>
