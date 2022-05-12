@@ -2,10 +2,16 @@ import { useForm } from "react-hook-form";
 
 const Form = () => {
   const { register, handleSubmit, reset } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
+
+  const onSubmit = async (data, e) => {
+    e.preventDefault();
+    fetch("/api/mail", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
     reset();
   };
+
   return (
     <form
       className="flex flex-col max-w-xs mx-auto py-8 space-y-3"
