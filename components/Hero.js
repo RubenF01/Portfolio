@@ -18,23 +18,24 @@ const Hero = () => {
     if (isLarge) return <Dividerlg />;
   };
 
-  const hola = () => console.log("hola");
   return (
     <div>
       <NavBar />
       <div className="pt-32 flex flex-col items-center text-slate-900">
         <div className="flex space-x-2">
-          <h1 className="text-xl pb-5">Hey there, I'm Ruben Frias</h1>
+          <h1 className="text-xl pb-5 xl:text-2xl">
+            Hey there, I'm Ruben Frias
+          </h1>
           <h1 className="animate-wiggle text-xl">👋🏾</h1>
         </div>
-        <h2 className="text-center font-bold text-3xl md:text-4xl lg:text-6xl md:px-10 max-w-xs md:max-w-3xl lg:max-w-4xl mx-auto pb-10 md:leading-relaxed">
+        <h2 className="text-center font-bold text-3xl md:text-4xl lg:text-6xl xl:text-8xl md:px-10 max-w-xs md:max-w-3xl lg:max-w-4xl xl:max-w-7xl mx-auto pb-10 md:leading-loose xl:leading-[1.1]">
           I'm a Front-End Engineer with a passion for building experiences
         </h2>
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1.1 }}
           type="button"
-          className="bg-slate-800 rounded-3xl py-2 px-4 text-lg mb-32 text-white shadow-2xl"
+          className="bg-slate-800 rounded-3xl py-2 px-4 xl:py-3 xl:px-5 text-lg xl:text-xl mb-32 text-white shadow-2xl"
         >
           <Link href="/contact">
             <a>Connect with me</a>

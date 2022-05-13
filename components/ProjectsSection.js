@@ -48,7 +48,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <div
-      className="pb-10 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto"
+      className="pb-10 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[1500px] mx-auto"
       id="projects"
     >
       <div className="pt-10">
@@ -56,7 +56,7 @@ const ProjectsSection = () => {
           Projects
         </h1>
       </div>
-      <div className="flex flex-col space-y-4 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto">
+      <div className="flex flex-col space-y-4 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[1500px] mx-auto">
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}

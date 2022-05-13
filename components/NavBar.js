@@ -12,7 +12,7 @@ const NavBar = () => {
   const isWide = useMedia("(min-width: 768px)", false);
 
   return (
-    <div className="flex justify-between max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto pt-8 text-slate-900">
+    <div className="flex justify-between max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[1500px] mx-auto pt-8 text-slate-900">
       {menuOpen ? (
         <motion.a
           initial={{ opacity: 1 }}

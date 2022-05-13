@@ -52,7 +52,7 @@ const About = () => {
 
       <main className="h-screen font-poppins">
         <NavBar />
-        <div className="max-w-xs md:max-w-2xl lg:max-w-4xl mx-auto pt-8 md:pt-16">
+        <div className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[1500px] mx-auto pt-8 md:pt-16">
           <span className="text-2xl md:text-4xl font-bold" ref={el} />
         </div>
 
@@ -60,7 +60,7 @@ const About = () => {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 4 }}
-          className="py-7 max-w-xs md:max-w-2xl lg:max-w-4xl mx-auto leading-loose md:text-3xl md:leading-[3rem] space-y-3"
+          className="py-7 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[1500px] mx-auto leading-loose md:text-3xl xl:text-6xl md:leading-[3rem] space-y-3"
         >
           <p>
             Hi, my name (as you may already know) is Ruben Frias. I'm a
