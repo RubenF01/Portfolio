@@ -45,7 +45,7 @@ const HamburgerMenu = () => {
               initial={{ x: startPointWidth }}
               animate={{ x: 0 }}
               transition={{ delay: 0.7, duration: 0.2 }}
-              href="#"
+              href="/#projects"
             >
               Projects
             </motion.a>
