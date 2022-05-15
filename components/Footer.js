@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = ({ classes }) => {
   return (
     <div
-      className={`flex flex-col items-center space-y-4 bg-slate-900 text-white py-8 ${classes}`}
+      className={`flex flex-col items-center space-y-6 lg:space-y-3 bg-slate-900 text-white py-8 lg:py-4 ${classes}`}
     >
       <nav className="space-x-5 lg:space-x-20 lg:text-lg">
         <Link href="/about">

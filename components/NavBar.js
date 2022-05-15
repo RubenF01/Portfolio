@@ -6,13 +6,15 @@ import { useContext } from "react";
 import { motion } from "framer-motion";
 import Link from "next/dist/client/link";
 
-const NavBar = () => {
+const NavBar = ({ classes, initialsClasses }) => {
   const value = useContext(MenuContext);
   let { toggleMenu, menuOpen } = value;
   const isWide = useMedia("(min-width: 768px)", false);
 
   return (
-    <div className="flex justify-between max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[1500px] mx-auto pt-8 text-slate-900">
+    <div
+      className={`flex justify-between max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto pt-8 text-slate-900 ${classes}`}
+    >
       {menuOpen ? (
         <motion.a
           initial={{ opacity: 1 }}
@@ -24,9 +26,15 @@ const NavBar = () => {
           RF
         </motion.a>
       ) : (
-        <Link href="/">
-          <a className="font-hurricane text-4xl font-bold">RF</a>
-        </Link>
+        <nav>
+          <Link href="/">
+            <a
+              className={`font-hurricane text-4xl font-bold ${initialsClasses}`}
+            >
+              RF
+            </a>
+          </Link>
+        </nav>
       )}
       {isWide ? (
         <nav className="space-x-7 lg:text-xl">

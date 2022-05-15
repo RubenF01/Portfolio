@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Ruben Frias</title>
         <meta name="description" content="Created by Rubén Frías" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className="font-poppins relative">

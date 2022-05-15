@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-const Form = () => {
+const Form = ({ classes }) => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = async (data, e) => {
@@ -14,7 +14,7 @@ const Form = () => {
 
   return (
     <form
-      className="flex flex-col max-w-xs mx-auto py-8 space-y-3"
+      className={`flex flex-col max-w-sm 2xl:max-w-xl mx-auto py-8 space-y-3 lg:px-10 lg:pt-16 ${classes}`}
       onSubmit={handleSubmit(onSubmit)}
     >
       <label htmlFor="name">Name</label>
@@ -33,7 +33,7 @@ const Form = () => {
       <label htmlFor="message">Message</label>
       <textarea
         name="message"
-        className="h-24 border-[1px] border-slate-900 rounded"
+        className="h-24 lg:h-36 2xl:h-52 border-[1px] border-slate-900 rounded"
         {...register("message", { required: true })}
       />
       <div className="flex justify-center">

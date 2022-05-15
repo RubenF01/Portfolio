@@ -47,26 +47,28 @@ const About = () => {
       <Head>
         <title>About</title>
         <meta name="description" content="About" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main className="h-screen font-poppins">
         <NavBar />
-        <div className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[1500px] mx-auto pt-8 md:pt-16">
-          <span className="text-2xl md:text-4xl font-bold" ref={el} />
+        <div className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto pt-8 md:pt-16">
+          <span
+            className="text-2xl md:text-4xl font-bold text-slate-900"
+            ref={el}
+          />
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 4 }}
-          className="py-7 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-[1500px] mx-auto leading-loose md:text-3xl xl:text-6xl md:leading-[3rem] space-y-3"
+          className="py-7 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto leading-loose md:text-3xl xl:text-6xl md:leading-[3rem] xl:leading-[1.3] space-y-3 text-slate-800"
         >
           <p>
             Hi, my name (as you may already know) is Ruben Frias. I'm a
             Front-End Engineer currently looking for a place to call home.
-          </p>
-          <p>
+            <br />
             My passion is building user-friendly and interactive web
             applications that provide the user with a meaningful experience.
           </p>
@@ -104,9 +106,7 @@ const About = () => {
 
         <style>{css}</style>
       </main>
-      <div className="">
-        <Footer />
-      </div>
+      <Footer classes="xl:mt-14" />
     </div>
   );
 };
