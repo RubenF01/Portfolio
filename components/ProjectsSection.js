@@ -48,7 +48,7 @@ const projects = [
 const ProjectsSection = () => {
   return (
     <div
-      className="pb-10 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto"
+      className="pb-10 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto lg:mt-16"
       id="projects"
     >
       <div className="pt-10">
