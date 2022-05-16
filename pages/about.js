@@ -67,7 +67,7 @@ const About = () => {
           className="py-7 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto leading-loose md:text-3xl xl:text-6xl md:leading-[3rem] xl:leading-[1.3] space-y-3 text-slate-800"
         >
           <p>
-            Hi, my name (as you may already know) is Ruben Frias. I'm a
+            Hi, my name (as you may already know) is Ruben Frias. I&apos;m a
             Front-End Engineer currently looking for a place to call home.
             <br />
             My passion is building user-friendly and interactive web

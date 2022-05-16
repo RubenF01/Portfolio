@@ -24,12 +24,12 @@ const Hero = () => {
       <div className="pt-32 flex flex-col items-center text-slate-900">
         <div className="flex space-x-2">
           <h1 className="text-xl pb-5 xl:text-2xl">
-            Hey there, I'm Ruben Frias
+            Hey there, I&apos;m Ruben Frias
           </h1>
           <h1 className="animate-wiggle text-xl">👋🏾</h1>
         </div>
         <h2 className="text-center font-bold text-3xl md:text-4xl lg:text-6xl xl:text-8xl md:px-10 max-w-xs md:max-w-3xl lg:max-w-4xl xl:max-w-7xl mx-auto pb-10 md:leading-loose xl:leading-[1.1]">
-          I'm a Front-End Engineer with a passion for building experiences
+          I&apos;m a Front-End Engineer with a passion for building experiences
         </h2>
         <motion.button
           whileHover={{ scale: 1.1 }}

@@ -11,6 +11,7 @@ const Project = ({ name, image, technologies, link }) => {
       onMouseLeave={() => setIsShown(!isShown)}
       className={`relative`}
     >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         className={`rounded ${isShown ? "blur-sm" : ""}`}
         src={image}
