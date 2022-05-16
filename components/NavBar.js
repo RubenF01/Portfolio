@@ -1,7 +1,7 @@
 import { useMedia } from "react-use";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import MenuContext from "../context/menuContext";
+import MenuContext from "../context/MenuContext";
 import { useContext } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";

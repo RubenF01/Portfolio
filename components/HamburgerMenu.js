@@ -1,4 +1,4 @@
-import MenuContext from "../context/menuContext";
+import MenuContext from "../context/MenuContext";
 import { useContext } from "react";
 import IconXMark from "./icons/IconXMark";
 import { motion, AnimatePresence } from "framer-motion";

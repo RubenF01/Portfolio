@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import MenuContext from "../context/menuContext";
+import MenuContext from "../context/MenuContext";
 import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
