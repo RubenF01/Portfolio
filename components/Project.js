@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Link from "next/dist/client/link";
+import { motion } from "framer-motion";
 
 const Project = ({ name, image, technologies, link }) => {
   const [isShown, setIsShown] = useState(false);
+
   return (
     <div
       onMouseEnter={() => setIsShown(!isShown)}
@@ -22,16 +24,17 @@ const Project = ({ name, image, technologies, link }) => {
           isShown ? "" : "invisible"
         }`}
       >
-        <h1 className="text-2xl">{name}</h1>
-        <p className="mb-5">{technologies}</p>
-        <div className="space-x-3">
-          <button className="border-2 rounded px-3 py-1">LEARN MORE</button>
-          <button className="border-2 rounded px-3 py-1">
-            <Link href={link}>
-              <a target="_blank">VISIT SITE</a>
-            </Link>
-          </button>
-        </div>
+        <h1 className="text-2xl 2xl:text-4xl">{name}</h1>
+        <p className="mb-5 2xl:text-lg">{technologies}</p>
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1.1 }}
+          className="border-2 rounded px-3 py-1"
+        >
+          <Link href={link}>
+            <a target="_blank">VISIT SITE</a>
+          </Link>
+        </motion.button>
       </div>
     </div>
   );

@@ -52,7 +52,8 @@ const About = () => {
 
       <main className="h-screen font-poppins">
         <NavBar />
-        <div className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto pt-8 md:pt-16">
+
+        <div className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto pt-8 md:pt-16">
           <span
             className="text-2xl md:text-4xl font-bold text-slate-900"
             ref={el}
@@ -63,7 +64,7 @@ const About = () => {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 4 }}
-          className="py-7 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto leading-loose md:text-3xl xl:text-6xl md:leading-[3rem] xl:leading-[1.3] space-y-3 text-slate-800"
+          className="py-7 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto leading-loose md:text-3xl xl:text-6xl md:leading-[3rem] xl:leading-[1.3] space-y-3 text-slate-800"
         >
           <p>
             Hi, my name (as you may already know) is Ruben Frias. I'm a
@@ -78,7 +79,7 @@ const About = () => {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 4 }}
-          className="max-w-xs lg:max-w-4xl mx-auto"
+          className="max-w-xs lg:max-w-xl mx-auto"
         >
           <Slider {...settings}>
             <div>

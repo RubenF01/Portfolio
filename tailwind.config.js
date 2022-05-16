@@ -14,11 +14,16 @@ module.exports = {
       },
       animation: {
         wiggle: "wiggle 1s ease-in-out infinite",
+        extend: "extend 0.2s ease-in-out",
       },
       keyframes: {
         wiggle: {
           "0%, 100%": { transform: "rotate(-10deg)" },
           "50%": { transform: "rotate(10deg)" },
+        },
+        extend: {
+          "0%": { transform: "scaleX(0)" },
+          "100%": { transform: "scaleX(100%)" },
         },
       },
     },

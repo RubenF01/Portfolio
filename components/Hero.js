@@ -35,7 +35,7 @@ const Hero = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 1.1 }}
           type="button"
-          className="bg-slate-800 rounded-3xl py-2 px-4 xl:py-3 xl:px-5 text-lg xl:text-xl mb-32 text-white shadow-2xl"
+          className="bg-slate-800 rounded-3xl py-2 px-4 xl:py-3 xl:px-5 text-lg xl:text-xl mb-32 text-white shadow-2xl lg:mt-14"
         >
           <Link href="/contact">
             <a>Connect with me</a>

@@ -1,4 +1,7 @@
 import Project from "./Project";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const projects = [
   {
@@ -46,9 +49,35 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.07,
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    console.log("Use effect hook, inView = ", inView);
+    if (inView) {
+      animation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounrce: 0.3,
+        },
+      });
+    }
+    if (!inView) {
+      animation.start({
+        x: "-100vw",
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
   return (
     <div
-      className="pb-10 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto lg:mt-16"
+      ref={ref}
+      className="pb-10 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto mt-11"
       id="projects"
     >
       <div className="pt-10">
@@ -56,11 +85,14 @@ const ProjectsSection = () => {
           Projects
         </h1>
       </div>
-      <div className="flex flex-col space-y-4 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto">
+      <motion.div
+        animate={animation}
+        className="flex flex-col space-y-4 max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto"
+      >
         {projects.map((project, index) => (
           <Project key={index} {...project} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

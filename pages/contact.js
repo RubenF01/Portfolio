@@ -13,7 +13,7 @@ const Contact = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <main className="font-poppins lg:relative.">
+      <main className="font-poppins lg:relative">
         <NavBar
           classes="lg:absolute lg:inset-0 lg:z-50"
           initialsClasses="lg:text-white"
@@ -31,12 +31,12 @@ const Contact = () => {
             />
           </div>
 
-          <Form classes="lg:h-screen lg:w-full lg:pt-48" />
+          <Form classes="lg:h-screen lg:w-full lg:z-40" />
         </div>
         <HamburgerMenu />
       </main>
 
-      <Footer classes="mt-10 lg:absolute lg:w-full lg:bottom-0" />
+      <Footer classes="mt-10 lg:absolute lg:w-full lg:bottom-0 lg:z-50" />
     </div>
   );
 };

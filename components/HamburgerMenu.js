@@ -29,7 +29,7 @@ const HamburgerMenu = () => {
               <a className="font-hurricane text-4xl font-bold text-white">RF</a>
             </Link>
             <div className="text-2xl w-5 fill-white">
-              <IconXMark onClick={() => toggleMenu()} />
+              <IconXMark onClick={toggleMenu} />
             </div>
           </motion.div>
           <nav className="flex flex-col max-w-xs mx-auto text-4xl space-y-8 text-white">
@@ -42,6 +42,7 @@ const HamburgerMenu = () => {
               About
             </motion.a>
             <motion.a
+              onClick={toggleMenu}
               initial={{ x: startPointWidth }}
               animate={{ x: 0 }}
               transition={{ delay: 0.7, duration: 0.2 }}

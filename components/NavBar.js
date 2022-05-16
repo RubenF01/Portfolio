@@ -39,18 +39,24 @@ const NavBar = ({ classes, initialsClasses }) => {
       {isWide ? (
         <nav className="space-x-7 lg:text-xl">
           <Link href="/about">
-            <a>About</a>
+            <a className="relative hover:after:content-[''] hover:after:bg-black hover:after:h-[3px] hover:after:w-12 hover:after:absolute hover:after:bottom-0 hover:after:right-2 hover:after:animate-extend">
+              About
+            </a>
           </Link>
           <Link href="/#projects">
-            <a>Projects</a>
+            <a className="relative hover:after:content-[''] hover:after:bg-black hover:after:h-[3px] hover:after:w-12 hover:after:absolute hover:after:bottom-0 hover:after:right-4 hover:after:animate-extend">
+              Projects
+            </a>
           </Link>
           <Link href="/contact">
-            <a>Contact</a>
+            <a className="relative hover:after:content-[''] hover:after:bg-black hover:after:h-[3px] hover:after:w-12 hover:after:absolute hover:after:bottom-0 hover:after:right-4 hover:after:animate-extend">
+              Contact
+            </a>
           </Link>
         </nav>
       ) : (
         <div className="w-7">
-          <FontAwesomeIcon onClick={() => toggleMenu()} icon={faBars} />
+          <FontAwesomeIcon onClick={toggleMenu} icon={faBars} />
         </div>
       )}
     </div>
