@@ -4,7 +4,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import MenuContext from "../context/menuContext";
 import { useContext } from "react";
 import { motion } from "framer-motion";
-import Link from "next/dist/client/link";
+import Link from "next/link";
 
 const NavBar = ({ classes, initialsClasses }) => {
   const value = useContext(MenuContext);
