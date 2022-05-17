@@ -50,7 +50,7 @@ const About = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <main className="h-screen font-poppins">
+      <main className="min-h-screen font-poppins">
         <NavBar />
 
         <div className="max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto pt-8 md:pt-16">

@@ -19,7 +19,7 @@ const Contact = () => {
           initialsClasses="lg:text-white"
         />
         <div className="mt-8 lg:mt-0 flex flex-col lg:flex-row lg:absolute lg:inset-0 lg:w-full">
-          <div className="relative lg:h-screen">
+          <div className="relative lg:min-h-screen">
             <div className="absolute inset-0 h-full bg-contactGray flex flex-col justify-center items-center text-white lg:pb-32">
               <h1 className="text-2xl lg:text-4xl">
                 Don&apos;t be shy, say hi!
@@ -39,7 +39,7 @@ const Contact = () => {
         <HamburgerMenu />
       </main>
 
-      <Footer classes="mt-10 lg:fixed lg:left-0 lg:right-0 lg:bottom-0 lg:z-50" />
+      <Footer classes="mt-10 lg:fixed lg:width-full lg:bottom-0 lg:z-50" />
     </div>
   );
 };
