@@ -6,7 +6,7 @@ const Form = ({ classes }) => {
 
   const onSubmit = async (data, e) => {
     e.preventDefault();
-    fetch("/api/mail", {
+    await fetch("/api/mail", {
       method: "POST",
       body: JSON.stringify(data),
     });

@@ -1,8 +1,9 @@
+/* eslint-disable import/no-anonymous-default-export */
 const mail = require("@sendgrid/mail");
 
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
-export default async function handler(req, res) {
+export default async (req, res) => {
   const body = JSON.parse(req.body);
   const message = `
     Name: ${body.name}\r\n
@@ -21,4 +22,4 @@ export default async function handler(req, res) {
   await mail.send(data);
 
   res.status(200).json({ status: "Ok" });
-}
+};
