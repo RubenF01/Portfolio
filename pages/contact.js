@@ -39,7 +39,7 @@ const Contact = () => {
         <HamburgerMenu />
       </main>
 
-      <Footer classes="mt-10 lg:fixed lg:width-full lg:bottom-0 lg:z-50" />
+      <Footer classes="mt-10 lg:fixed lg:w-full lg:bottom-0 lg:z-50" />
     </div>
   );
 };
