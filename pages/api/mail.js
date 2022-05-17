@@ -14,7 +14,7 @@ export default async (req, res) => {
 
     const data = {
       to: "admin@rubenfrias.com",
-      from: "admin@rubenfrias.com",
+      from: "sender@rubenfrias.com",
       subject: body.subject,
       text: message,
       html: message.replace(/\r\n/g, "<br>"),
