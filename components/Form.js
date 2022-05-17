@@ -5,12 +5,16 @@ const Form = ({ classes }) => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = async (data, e) => {
-    e.preventDefault();
-    await fetch("/api/mail", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-    reset();
+    try {
+      e.preventDefault();
+      await fetch("/api/mail", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+      reset();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
