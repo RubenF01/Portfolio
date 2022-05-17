@@ -55,7 +55,6 @@ const ProjectsSection = () => {
   const animation = useAnimation();
 
   useEffect(() => {
-    console.log("Use effect hook, inView = ", inView);
     if (inView) {
       animation.start({
         x: 0,
