@@ -3,8 +3,10 @@ import Hero from "../components/Hero";
 import ProjectsSection from "../components/ProjectsSection";
 import HamburgerMenu from "../components/HamburgerMenu";
 import Footer from "../components/Footer";
+import SENDGRID_API_KEY from "../.env.local";
 
 export default function Home() {
+  console.log(SENDGRID_API_KEY);
   return (
     <div>
       <Head>

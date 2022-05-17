@@ -107,7 +107,7 @@ const About = () => {
 
         <style>{css}</style>
       </main>
-      <Footer classes="xl:mt-14" />
+      <Footer classes="mt-14 lg:mt-20" />
     </div>
   );
 };
