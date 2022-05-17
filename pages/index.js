@@ -5,7 +5,6 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import Footer from "../components/Footer";
 
 export default function Home() {
-  console.log(SENDGRID_API_KEY);
   return (
     <div>
       <Head>
