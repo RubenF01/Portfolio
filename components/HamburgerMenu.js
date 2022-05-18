@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.2, delay: 0.6 }}
-            className="max-w-xs mx-auto flex justify-between pt-8 pb-16"
+            className="max-w-xs md:max-w-2xl mx-auto flex justify-between pt-8 pb-16"
           >
             <Link href="/">
               <a className="font-hurricane text-4xl font-bold text-white">RF</a>
@@ -32,7 +32,8 @@ const HamburgerMenu = () => {
               <IconXMark onClick={toggleMenu} />
             </div>
           </motion.div>
-          <nav className="flex flex-col max-w-xs mx-auto text-4xl space-y-8 text-white">
+
+          <nav className="flex flex-col max-w-xs md:max-w-2xl mx-auto text-4xl space-y-8 md:space-y-16 text-white">
             <motion.a
               initial={{ x: startPointWidth }}
               animate={{ x: 0 }}

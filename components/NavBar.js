@@ -9,7 +9,7 @@ import Link from "next/link";
 const NavBar = ({ classes, initialsClasses }) => {
   const value = useContext(MenuContext);
   let { toggleMenu, menuOpen } = value;
-  const isWide = useMedia("(min-width: 768px)", false);
+  const isWide = useMedia("(min-width: 1024px)", false);
 
   return (
     <div

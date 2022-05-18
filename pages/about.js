@@ -12,8 +12,10 @@ import ExpressLogo from "../public/expresslogo.svg";
 import ReduxLogo from "../public/reduxlogo.svg";
 import MongodbLogo from "../public/mongodblogo.svg";
 import { motion } from "framer-motion";
+import { useMedia } from "react-use";
 
 const About = () => {
+  const isSmall = useMedia("(max-width: 767px)", false);
   const el = useRef(null);
   const typed = useRef(null);
 
@@ -38,7 +40,7 @@ const About = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: isSmall ? 1 : 3,
     slidesToScroll: 1,
   };
 
@@ -79,26 +81,30 @@ const About = () => {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 4 }}
-          className="max-w-xs lg:max-w-xl mx-auto"
+          className="max-w-xs md:max-w-4xl mx-auto"
         >
-          <Slider {...settings}>
-            <div>
-              <ReactLogo className="fill-[#62dafc] max-w-[16rem] mx-auto" />
+          <Slider {...settings} className="flex flex-col">
+            <div className="">
+              <ReactLogo
+                className="fill-[#62dafc] mx-auto"
+                height={200}
+                width={200}
+              />
             </div>
             <div>
-              <NextjsLogo className="pt-16 max-w-[16rem] mx-auto" />
+              <NextjsLogo className="mx-auto" height={200} width={200} />
             </div>
             <div>
-              <TailwindLogo className="max-w-[16rem] mx-auto" />
+              <TailwindLogo className="mx-auto" height={200} width={200} />
             </div>
             <div>
-              <ExpressLogo className="pt-20 max-w-[16rem] mx-auto" />
+              <ExpressLogo className="mx-auto" height={200} width={200} />
             </div>
             <div>
-              <ReduxLogo className="max-w-[16rem] mx-auto" />
+              <ReduxLogo className="mx-auto" height={200} width={200} />
             </div>
             <div>
-              <MongodbLogo className="pt-28 max-w-[16rem] mx-auto" />
+              <MongodbLogo className="mx-auto" height={200} width={200} />
             </div>
           </Slider>
         </motion.div>
