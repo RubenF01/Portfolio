@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import MenuContext from "../context/MenuContext";
 import { useState } from "react";
+import HamburgerMenu from "../components/HamburgerMenu";
 
 function MyApp({ Component, pageProps }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }) {
       }}
     >
       <Component {...pageProps} />
+      <HamburgerMenu />
     </MenuContext.Provider>
   );
 }

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import NavBar from "../components/NavBar";
-import HamburgerMenu from "../components/HamburgerMenu";
 import Footer from "../components/Footer";
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
@@ -108,8 +107,6 @@ const About = () => {
             </div>
           </Slider>
         </motion.div>
-
-        <HamburgerMenu />
 
         <style>{css}</style>
       </main>

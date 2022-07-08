@@ -1,6 +1,7 @@
 import { useMedia } from "react-use";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Github from "../public/github.svg";
 import MenuContext from "../context/MenuContext";
 import { useContext } from "react";
 import { motion } from "framer-motion";
@@ -13,7 +14,7 @@ const NavBar = ({ classes, initialsClasses }) => {
 
   return (
     <div
-      className={`flex justify-between max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto pt-8 text-slate-900 ${classes}`}
+      className={`flex justify-between max-w-xs md:max-w-2xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[105rem] mx-auto pt-8 text-slate-900 font-poppins ${classes}`}
     >
       {menuOpen ? (
         <motion.a
@@ -37,7 +38,7 @@ const NavBar = ({ classes, initialsClasses }) => {
         </nav>
       )}
       {isWide ? (
-        <nav className="space-x-7 lg:text-xl">
+        <nav className="space-x-7 lg:text-xl flex items-center">
           <Link href="/about">
             <a className="relative hover:after:content-[''] hover:after:bg-black hover:after:h-[3px] hover:after:w-12 hover:after:absolute hover:after:bottom-0 hover:after:right-2 hover:after:animate-extend">
               About
@@ -51,6 +52,12 @@ const NavBar = ({ classes, initialsClasses }) => {
           <Link href="/contact">
             <a className="relative hover:after:content-[''] hover:after:bg-black hover:after:h-[3px] hover:after:w-12 hover:after:absolute hover:after:bottom-0 hover:after:right-4 hover:after:animate-extend">
               Contact
+            </a>
+          </Link>
+          <div>|</div>
+          <Link href="https://github.com/RubenF01" passHref>
+            <a className="w-7 block" target="_blank">
+              <Github />
             </a>
           </Link>
         </nav>

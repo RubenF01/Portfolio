@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
-import HamburgerMenu from "../components/HamburgerMenu";
 
 const Contact = () => {
   return (
@@ -26,7 +26,6 @@ const Contact = () => {
               </h1>
               <h2 className="lg:text-2xl">Let&apos;s build together!</h2>
             </div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="lg:h-[90%] lg:object-cover"
               src="/city.jpg"
@@ -36,7 +35,6 @@ const Contact = () => {
 
           <Form classes="lg:h-screen lg:w-full lg:z-40" />
         </div>
-        <HamburgerMenu />
       </main>
 
       <Footer classes="mt-10 lg:fixed lg:w-full lg:bottom-0 lg:z-50" />

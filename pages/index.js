@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
 import ProjectsSection from "../components/ProjectsSection";
-import HamburgerMenu from "../components/HamburgerMenu";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <main className="font-poppins relative">
         <Hero />
         <ProjectsSection />
-        <HamburgerMenu />
         <Footer />
       </main>
     </div>
