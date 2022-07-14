@@ -5,6 +5,13 @@ import { useEffect } from "react";
 
 const projects = [
   {
+    name: "CatWiki",
+    image: "/CatWiki.png",
+    technologies: "Next.JS / Tailwind CSS",
+    link: "https://cat-wiki-iota.vercel.app/",
+    linkGithub: "https://github.com/RubenF01/CatWiki",
+  },
+  {
     name: "Loopstudios",
     image: "/Loopstudios.png",
     technologies: "Next.JS / Tailwind CSS",
@@ -80,7 +87,7 @@ const ProjectsSection = () => {
       id="projects"
     >
       <div className="pt-10">
-        <h1 className="font-bold text-xl lg:text-3xl pb-5 text-slate-900">
+        <h1 className="pb-5 text-xl font-bold lg:text-3xl text-slate-900">
           Projects
         </h1>
       </div>
