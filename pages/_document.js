@@ -24,6 +24,9 @@ class MyDocument extends Document {
             type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
+          <meta property="og:title" content="Ruben Frias" />
+          <meta property="og:url" content="https://rubenfrias.com/" />
+          <meta property="og:image" content="../public/rubenfrias.png" />
         </Head>
         <body>
           <Main />
